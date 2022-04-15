@@ -1,0 +1,5 @@
+<section id="listVinyls">
+  <div class="bloc" *ngFor="let vinyl of vinyls">
+    <app-vinyl-details [input_title]="vinyl.title"></app-vinyl-details>
+  </div>
+</section>
