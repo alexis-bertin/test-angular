@@ -23,12 +23,11 @@ export class VinylDetailsComponent implements OnInit {
 
   showDetails() : void
   {
-    for (let v of VINYLS){
-      if(v.title == this.input_title){
-        this.title = v.title;
-        this.size = v.size;
-        this.artist = v.artist;
-      }
+    let vinyl   = VINYLS.find(v => v.title === this.input_title);
+    if(vinyl){
+      this.title  = vinyl.title;
+      this.size   = vinyl.size;
+      this.artist = vinyl.artist;
     }
   }
 
